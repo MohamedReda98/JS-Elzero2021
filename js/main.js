@@ -920,3 +920,272 @@ for (let i = 0; i < objectLength; i++) {
 "####################"
 
  */
+/*
+for (let i = 1; i<+100 ;i++){
+// make the main elements
+    let myMainDiv =document.createElement("div");
+    let myMainh3 =document.createElement("div");
+    let myMainp =document.createElement("div");
+    let breaking = document.createElement("hr")
+// make the main text nodes
+    let textDiv = document.createTextNode(`My Main ${i} Product`);
+    let texth3 = document.createTextNode(`Product Name ${i}`);
+    let textp = document.createTextNode(`Description Of Product ${i}: this is the project`);
+    // set the class attribute and assign its value
+    myMainDiv.setAttribute("class","product");
+    myMainDiv.style="padding: 20px;\n" +
+        "\twidth: 200px;\n" +
+        "\tdisplay: flex;\n" +
+        "\tflex-direction: column;\n" +
+        "\talign-items: center;\n" +
+        "\ttext-align: center;\n" +
+        "\tborder-radius: .5rem;\n" +
+        "\tborder-bottom: 2px solid var(--main-color);\n" +
+        "\t/*box-shadow: 0 2px 7px rgb(14 55 54 / 20%);\n" +
+        "\tbox-shadow: 0 10px 40px -14px rgba(0,0,0,0.25);\n" +
+        "\ttransition: .5s;";
+    myMainh3.style="font-size: 1rem;\n" +
+        "\tfont-weight: 600;\n" +
+        "\tmargin: 0.7rem 0 0.4rem;";
+    myMainp.style="color: blue;\n" +
+        "\tfont-size: 24px;\n" +
+        "\tpadding-top: 2rem;";
+// adding them to the view menu
+    myMainDiv.appendChild(textDiv);
+    myMainh3.appendChild(texth3);
+    myMainp.appendChild(textp);
+// adding them to the main div
+    myMainDiv.appendChild(myMainh3);
+    myMainDiv.appendChild(myMainp);
+    document.body.appendChild(myMainDiv);
+    // document.body.appendChild(breaking);
+    document.body.style="display: grid;\n" +
+        "\tgrid-template-columns: repeat(auto-fit,minmax(200px, auto));\n" +
+        "\tjustify-content: center;\n" +
+        "\tgap: 1rem;\n" +
+        "\tmargin-top: 2rem;";
+}
+*/
+/* get the element by various methods.
+document.getElementById('elzero');
+document.getElementsByTagName('div');
+document.getElementsByClassName('element');
+document.querySelector('#elzero');
+document.querySelector('.element');
+document.querySelector('div');
+document.querySelector('[name="js"]');
+document.querySelectorAll('#elzero');
+document.querySelectorAll('.element');
+document.querySelectorAll('div');
+document.querySelectorAll('[name="js"]');
+console.log(document.body.firstElementChild);
+console.log(document.body.firstChild.nextSibling);
+console.log(document.body.children[0]);
+console.log(document.body.childNodes[1]);
+*/
+/*
+// make auto alt and src update
+let myImages = document.querySelectorAll('img');
+console.log(myImages)
+for (const myImagesKey of myImages) {
+    myImagesKey.setAttribute('src','https://elzero.org/wp-content/themes/elzero/imgs/logo.png');
+    myImagesKey.setAttribute('alt','Elzero Logo');
+    myImagesKey.style="background-color: black;"
+}
+*/
+/*
+// change the currency equivalent values in dollar and pound
+let myInput = document.querySelector('[name="dollar"]');
+let myOut = document.querySelector('.result');
+console.log(myInput);
+console.log(myOut);
+myInput.oninput = function (){
+    if (isNaN(myInput.value)){
+        myOut.textContent = ` {0} USD Dollar = {0} Egyptian Pound`
+    }
+    else {
+        myOut.textContent = ` {${myInput.value} USD Dollar = {${(myInput.value*15.6).toFixed(2)} Egyptian Pound`
+    }
+}
+*/
+
+/*
+// Swap the values of the title and content through two elements
+let myOne = document.querySelector('.one');
+let myTwo = document.querySelector('.two');
+let myOneTitle = myOne.title;
+let myOneContent = myOne.textContent;
+myOne.title = myTwo.title;
+myOne.textContent = myTwo.textContent;
+myTwo.title = myOneTitle;
+myTwo.textContent = myOneContent;
+console.log(myOne);
+console.log(myTwo);
+ */
+
+/*
+// Check if the image has alt attribute so say old or not said the new
+let myImages = document.querySelectorAll('img');
+for (const myImage of myImages) {
+    if (myImage.hasAttribute('alt')){
+        myImage.setAttribute('alt','Old')
+    }else {
+        myImage.setAttribute('alt','Elzero New')
+    }
+}
+console.log(myImages);
+ */
+/*
+// Make a form to generate the elements that user need and show them to the user page
+
+document.querySelector(
+    '[name="create"]'
+).onclick = function (){
+    let result = document.querySelector('.results');
+    let num = document.querySelector('[name="elements"]').value;
+    let textContent = document.querySelector('[name="texts"]').value;
+    let type = document.querySelector('[name="type"]').value.toLowerCase();
+    console.log(result);
+    console.log(num);
+    console.log(textContent);
+    console.log(type);
+    result.textContent = "";
+    if (num !== 0 && !isNaN(num) && textContent !== "" && type !== "" ){
+        for (let i = 1; i<= num; i++){
+            // make the main element
+            let myMain =document.createElement(type);
+            myMain.textContent = textContent;
+            myMain.style.width = '200px';
+            myMain.style.height = '20px';
+            myMain.style.borderRadius = '5px';
+            myMain.style.color = 'white';
+            myMain.style.textAlign = 'center';
+            myMain.style.padding = '5px';
+            myMain.style.margin = '20px';
+            myMain.style.backgroundColor = 'red';
+            result.appendChild(myMain);
+            console.log(result);
+        }
+    }
+    result.style="display: grid;\n" +
+        "\tgrid-template-columns: repeat(auto-fit,minmax(200px, auto));\n" +
+        "\tjustify-content: center;\n" +
+        "\tgap: 1rem;\n" +
+        "\tmargin-top: 2rem;";
+};
+document.forms[0].onsubmit = function (e) {
+    e.preventDefault();
+}
+ */
+// let myFields = document.querySelectorAll('[type = "number"]');
+/*
+let myanser = prompt('Please enter the numbers range you want to print','Example: 5-20');
+console.log(myanser);
+let mynumbers = myanser.split('-',2);
+mynumbers.reverse();
+for (let i = +parseInt(mynumbers[0]) ; i<= parseInt(mynumbers[1]) ; i++){
+    console.log(i)
+}
+
+
+ */
+let mybutton = document.querySelector('.btn');
+let myMain = document.querySelector('.main');
+
+mybutton.onclick = function (){
+    myMain.style.display = 'none';
+}
+
+let mycounter = document.querySelector('.counter');
+setInterval(function (){
+    if (mycounter.innerHTML === '0'){
+        // alert('your counter finished');
+        clearInterval(1);
+    }else {
+        mycounter.innerHTML -= 1;
+    }
+},1000);
+
+let lisC = document.querySelectorAll('.colors li');
+let lisF = document.querySelectorAll('.fonts li');
+let lisS = document.querySelectorAll('.sizes li');
+
+
+let showarea = document.querySelector('.show');
+if (window.localStorage.getItem('color')){
+    // if there is a color
+    // 1) change div background color
+    showarea.style.backgroundColor = window.localStorage.getItem('color');
+    // 2) Remove active class from li
+    lisC.forEach((li)=>{
+        li.classList.remove('active')
+    });
+    // 3) Add active class to current color
+    document.querySelector(`[data-color='${window.localStorage.getItem('color')}']`).classList.add('active');
+}
+
+lisC.forEach((li)=>{
+    li.addEventListener('click',evt => {
+        // Remove active class from li
+        lisC.forEach((li)=>{
+            li.classList.remove('active')
+        });
+        // add active class to li
+        evt.currentTarget.classList.add('active');
+        // add color to local storage
+        window.localStorage.setItem('color',evt.currentTarget.dataset.color);
+        // change div background color
+        showarea.style.backgroundColor = window.localStorage.getItem('color');
+    })
+})
+if (window.localStorage.getItem('font')){
+    // if there is a color
+    // 1) change div background color
+    showarea.style.fontFamily = window.localStorage.getItem('font');
+    // 2) Remove active class from li
+    lisF.forEach((li)=>{
+        li.classList.remove('active')
+    });
+    // 3) Add active class to current color
+    document.querySelector(`[data-font='${window.localStorage.getItem('font')}']`).classList.add('active');
+}
+lisF.forEach((li)=>{
+    li.addEventListener('click',evt => {
+        // Remove active class from li
+        lisF.forEach((li)=>{
+            li.classList.remove('active')
+        });
+        // add active class to li
+        evt.currentTarget.classList.add('active');
+        // add color to local storage
+        window.localStorage.setItem('font',evt.currentTarget.dataset.font);
+        // change div background color
+        showarea.style.fontFamily = window.localStorage.getItem('font');
+    })
+})
+if (window.localStorage.getItem('size')){
+    // if there is a color
+    // 1) change div background color
+    showarea.style.fontSize = window.localStorage.getItem('size');
+    // 2) Remove active class from li
+    lisS.forEach((li)=>{
+        li.classList.remove('active')
+    });
+    // 3) Add active class to current color
+    document.querySelector(`[data-size='${window.localStorage.getItem('size')}']`).classList.add('active');
+}
+
+lisS.forEach((li)=>{
+    li.addEventListener('click',evt => {
+        // Remove active class from li
+        lisS.forEach((li)=>{
+            li.classList.remove('active')
+        });
+        // add active class to li
+        evt.currentTarget.classList.add('active');
+        // add color to local storage
+        window.localStorage.setItem('size',evt.currentTarget.dataset.size);
+        // change div background color
+        showarea.style.fontSize =window.localStorage.getItem('size')+`px`;
+    })
+})
