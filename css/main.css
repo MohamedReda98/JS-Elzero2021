@@ -1,0 +1,141 @@
+*{
+	/*font-family: 'Cairo', sans-serif;*/
+	/*font-family: 'Roboto', sans-serif;*/
+	/*font-family: 'Open Sans', sans-serif;*/
+}
+.vercode{
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+	gap: 5px;
+}.vercode input{
+	outline: none;
+	border-radius: 3px;
+	font-weight: bolder;
+	color: green;
+	text-align: center;
+ }
+#submit{
+	width: 100px;
+	color: white;
+	background-color: green;
+}
+.main{
+	width: 400px;
+	height: 200px;
+	border-radius: 5px;
+	margin: 30px auto;
+	background-color: #eee;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.btn{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	background-color: red;
+	color: white;
+	font-size: 25px;
+	font-weight: bolder;
+	border: none;
+	border-radius: 50%;
+}
+	.counter{
+		width: 100px;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: red;
+		color: white;
+		font-size: 25px;
+		font-weight: bolder;
+		border: none;
+		border-radius: 50%;
+		margin: 30px auto;
+	}
+.pick{
+	width: fit-content;
+	height: fit-content;
+	margin: 20px auto;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	gap: 20px;
+}
+.pick .picker ul{
+	list-style: none;
+	flex-direction: row;
+	gap: 10px;
+	background-color: #eeeeee;
+	width: fit-content;
+	height: fit-content;
+	
+}
+.pick .picker ul li{
+	border: none;
+	border-radius: 50%;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.pick .picker ul:not(.sizes) li{
+	width: 90px;
+	height: 90px;
+}
+.sizes li{
+	width: 50px;
+	height: 50px;
+}
+.pick .picker ul li.active{
+	opacity: 1;
+}
+.pick .picker ul li[data-color = 'red']{
+	background-color: red;
+}
+.pick .picker ul li[data-color = 'green']{
+	background-color: green;
+}
+.pick .picker ul li[data-color = 'blue']{
+	background-color: blue;
+}
+.pick .picker ul li[data-color = 'yellow']{
+	background-color: yellow;
+}
+.pick .picker ul li[data-color = 'silver']{
+	background-color: silver;
+}
+.pick .picker ul li[data-color = 'black']{
+	background-color: black;
+}
+
+.pick .show{
+	width: 350px;
+	height: 350px;
+	border: none;
+	background-color: red;
+	color: white;
+}
+.pick .show,.pick .picker ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 20px;
+	margin: 20px auto;
+}
+.fonts li,.sizes li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2px;
+	background-color: white;
+}
+
+
